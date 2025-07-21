@@ -41,7 +41,7 @@ All colors MUST be HSL.
 
     /* Light theme custom tokens - restored original gradients and hero with emerald accents */
     --gradient-primary: linear-gradient(135deg, hsl(220 60% 97%), hsl(210 40% 96%));
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.95), hsl(197 71% 52% / 0.9));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 25% / 0.7), hsl(197 71% 30% / 0.6));
     --gradient-hero-banner: linear-gradient(135deg, hsl(221 83% 53%), hsl(197 71% 52%));
     --hero-bg: url('/lovable-uploads/9ee271b8-e1d4-44e8-b542-89b52f0dd32e.png');
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.15);

@@ -77,7 +77,7 @@ const Index = () => {
                   <img 
                     src="/lovable-uploads/e1a072ae-3beb-4c51-908c-e17b4ab545d4.png" 
                     alt="Tim - Your Professional Development Expert"
-                    className="w-16 h-16 object-contain"
+                    className="w-48 h-48 object-contain"
                   />
                 </div>
                 

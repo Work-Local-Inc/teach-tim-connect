@@ -17,17 +17,17 @@ const Index = () => {
         
         <div className="relative container mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-foreground space-y-6 relative">
-              <Badge variant="secondary" className="w-fit bg-primary/20 text-primary border-primary/30">
+            <div className="text-white space-y-6 relative">
+              <Badge variant="secondary" className="w-fit bg-white/20 text-white border-white/30">
                 ✨ Decades of Teaching Excellence
               </Badge>
               
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
                 Unlock Your Potential with 
                 <span className="block text-primary"> Expert Training</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+              <p className="text-xl text-white/80 leading-relaxed max-w-xl">
                 From technical skills to communication mastery, I help adult learners 
                 and corporate teams achieve their professional development goals through 
                 proven teaching methods and personalized attention.
@@ -74,15 +74,15 @@ const Index = () => {
               <div className="flex items-center space-x-8 pt-8">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">25+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-sm text-white/80">Years Experience</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">1000+</div>
-                  <div className="text-sm text-muted-foreground">Students Trained</div>
+                  <div className="text-sm text-white/80">Students Trained</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">100+</div>
-                  <div className="text-sm text-muted-foreground">Corporate Clients</div>
+                  <div className="text-sm text-white/80">Corporate Clients</div>
                 </div>
               </div>
             </div>

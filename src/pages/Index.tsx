@@ -4,30 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { 
-  GraduationCap, 
-  Users, 
-  Award, 
-  BookOpen, 
-  CheckCircle, 
-  Star,
-  Download,
-  Calendar,
-  Target,
-  Lightbulb
-} from "lucide-react";
-
+import { GraduationCap, Users, Award, BookOpen, CheckCircle, Star, Download, Calendar, Target, Lightbulb } from "lucide-react";
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(/lovable-uploads/a606f90b-1c3b-4734-9cbf-5fcac340d0d1.png)` }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(/lovable-uploads/a606f90b-1c3b-4734-9cbf-5fcac340d0d1.png)`
+      }} />
         <div className="absolute inset-0 bg-gradient-hero" />
         
         <div className="relative container mx-auto px-4 py-20">
@@ -52,7 +38,7 @@ const Index = () => {
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
                   Explore Training Programs
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button size="lg" variant="outline" className="border-white text-white hover:text-primary bg-orange-500 hover:bg-orange-400">
                   Download Free Resources
                 </Button>
               </div>
@@ -75,11 +61,7 @@ const Index = () => {
             </div>
             
             <div className="lg:justify-self-end">
-              <LeadCaptureForm 
-                title="Start Your Learning Journey"
-                description="Get a free consultation and discover the perfect training solution for your needs."
-                className="bg-white/95 backdrop-blur-sm shadow-card"
-              />
+              <LeadCaptureForm title="Start Your Learning Journey" description="Get a free consultation and discover the perfect training solution for your needs." className="bg-white/95 backdrop-blur-sm shadow-card" />
             </div>
           </div>
         </div>
@@ -97,13 +79,23 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { icon: GraduationCap, label: "Certified Instructor", desc: "Multiple Industry Certifications" },
-              { icon: Users, label: "Team Training", desc: "Small Groups to Large Corporations" },
-              { icon: Award, label: "Excellence Award", desc: "Recognition for Outstanding Teaching" },
-              { icon: BookOpen, label: "Continuous Learning", desc: "Always Updated with Latest Methods" }
-            ].map((item, index) => (
-              <Card key={index} className="text-center p-6 border-0 shadow-soft">
+            {[{
+            icon: GraduationCap,
+            label: "Certified Instructor",
+            desc: "Multiple Industry Certifications"
+          }, {
+            icon: Users,
+            label: "Team Training",
+            desc: "Small Groups to Large Corporations"
+          }, {
+            icon: Award,
+            label: "Excellence Award",
+            desc: "Recognition for Outstanding Teaching"
+          }, {
+            icon: BookOpen,
+            label: "Continuous Learning",
+            desc: "Always Updated with Latest Methods"
+          }].map((item, index) => <Card key={index} className="text-center p-6 border-0 shadow-soft">
                 <CardContent className="space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                     <item.icon className="h-6 w-6 text-primary" />
@@ -111,8 +103,7 @@ const Index = () => {
                   <h3 className="font-semibold">{item.label}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -130,45 +121,37 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Target,
-                title: "Technical Training",
-                desc: "Electrical, mechanical, and industry-specific technical skills with hands-on learning.",
-                features: ["Electrical Systems", "Mechanical Operations", "Safety Protocols", "Equipment Training"]
-              },
-              {
-                icon: Users,
-                title: "Communication Skills",
-                desc: "Professional communication, presentation skills, and interpersonal effectiveness.",
-                features: ["Public Speaking", "Business Writing", "Team Communication", "Leadership Skills"]
-              },
-              {
-                icon: Award,
-                title: "Industry Certifications",
-                desc: "Preparation for professional certifications and career advancement.",
-                features: ["Exam Preparation", "Skill Assessments", "Certification Guidance", "Career Planning"]
-              },
-              {
-                icon: Lightbulb,
-                title: "Corporate Training",
-                desc: "Custom training programs designed for teams and organizations.",
-                features: ["Team Building", "Process Improvement", "Skills Development", "Custom Curriculum"]
-              },
-              {
-                icon: BookOpen,
-                title: "Adult Education",
-                desc: "Specialized approaches for adult learners returning to education.",
-                features: ["Learning Strategies", "Study Skills", "Goal Setting", "Motivation Techniques"]
-              },
-              {
-                icon: GraduationCap,
-                title: "Life Skills Training",
-                desc: "Practical skills for personal and professional growth including sports instruction.",
-                features: ["Snowboarding", "Motorcycling", "Safety Training", "Personal Development"]
-              }
-            ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 shadow-soft">
+            {[{
+            icon: Target,
+            title: "Technical Training",
+            desc: "Electrical, mechanical, and industry-specific technical skills with hands-on learning.",
+            features: ["Electrical Systems", "Mechanical Operations", "Safety Protocols", "Equipment Training"]
+          }, {
+            icon: Users,
+            title: "Communication Skills",
+            desc: "Professional communication, presentation skills, and interpersonal effectiveness.",
+            features: ["Public Speaking", "Business Writing", "Team Communication", "Leadership Skills"]
+          }, {
+            icon: Award,
+            title: "Industry Certifications",
+            desc: "Preparation for professional certifications and career advancement.",
+            features: ["Exam Preparation", "Skill Assessments", "Certification Guidance", "Career Planning"]
+          }, {
+            icon: Lightbulb,
+            title: "Corporate Training",
+            desc: "Custom training programs designed for teams and organizations.",
+            features: ["Team Building", "Process Improvement", "Skills Development", "Custom Curriculum"]
+          }, {
+            icon: BookOpen,
+            title: "Adult Education",
+            desc: "Specialized approaches for adult learners returning to education.",
+            features: ["Learning Strategies", "Study Skills", "Goal Setting", "Motivation Techniques"]
+          }, {
+            icon: GraduationCap,
+            title: "Life Skills Training",
+            desc: "Practical skills for personal and professional growth including sports instruction.",
+            features: ["Snowboarding", "Motorcycling", "Safety Training", "Personal Development"]
+          }].map((service, index) => <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 shadow-soft">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="h-8 w-8 text-white" />
@@ -176,16 +159,13 @@ const Index = () => {
                   <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.desc}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm">
+                    {service.features.map((feature, i) => <li key={i} className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -199,32 +179,25 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah Johnson",
-                role: "Engineering Manager",
-                content: "Tim's technical training program was exactly what our team needed. His approach made complex concepts accessible and practical.",
-                rating: 5
-              },
-              {
-                name: "Michael Chen",
-                role: "Career Changer",
-                content: "At 45, I thought it was too late to learn new skills. Tim's patient teaching style gave me the confidence to pursue my certification.",
-                rating: 5
-              },
-              {
-                name: "Lisa Rodriguez",
-                role: "HR Director",
-                content: "We've worked with Tim for corporate communication training. The improvement in our team dynamics has been remarkable.",
-                rating: 5
-              }
-            ].map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-soft">
+            {[{
+            name: "Sarah Johnson",
+            role: "Engineering Manager",
+            content: "Tim's technical training program was exactly what our team needed. His approach made complex concepts accessible and practical.",
+            rating: 5
+          }, {
+            name: "Michael Chen",
+            role: "Career Changer",
+            content: "At 45, I thought it was too late to learn new skills. Tim's patient teaching style gave me the confidence to pursue my certification.",
+            rating: 5
+          }, {
+            name: "Lisa Rodriguez",
+            role: "HR Director",
+            content: "We've worked with Tim for corporate communication training. The improvement in our team dynamics has been remarkable.",
+            rating: 5
+          }].map((testimonial, index) => <Card key={index} className="border-0 shadow-soft">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
                   </div>
                   <p className="text-muted-foreground mb-4">"{testimonial.content}"</p>
                   <div>
@@ -232,8 +205,7 @@ const Index = () => {
                     <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -263,8 +235,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

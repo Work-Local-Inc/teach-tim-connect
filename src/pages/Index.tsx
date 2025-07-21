@@ -5,6 +5,7 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GraduationCap, Users, Award, BookOpen, CheckCircle, Star, Download, Calendar, Target, Lightbulb } from "lucide-react";
+
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Header />
@@ -18,7 +19,7 @@ const Index = () => {
         
         <div className="relative container mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-6">
+            <div className="text-white space-y-6 relative">
               <Badge variant="secondary" className="w-fit bg-white/20 text-white border-white/30">
                 ✨ Decades of Teaching Excellence
               </Badge>
@@ -41,6 +42,34 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="border-white text-white hover:text-primary bg-orange-500 hover:bg-orange-400">
                   Download Free Resources
                 </Button>
+              </div>
+              
+              {/* Tim's Cartoon - Desktop: floating right, Mobile: centered below buttons */}
+              <div className="hidden lg:block absolute -right-8 top-32">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/tim-cartoon.png" 
+                    alt="Tim - Your friendly professional development instructor"
+                    className="w-80 h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300 ease-smooth"
+                    style={{
+                      filter: 'drop-shadow(0 8px 25px rgba(0, 0, 0, 0.15))',
+                      clipPath: 'ellipse(90% 85% at 50% 20%)'
+                    }}
+                  />
+                </div>
+              </div>
+              
+              {/* Tim's Cartoon - Mobile: centered below buttons */}
+              <div className="lg:hidden flex justify-center pt-4">
+                <img 
+                  src="/lovable-uploads/tim-cartoon.png" 
+                  alt="Tim - Your friendly professional development instructor"
+                  className="w-52 h-auto drop-shadow-lg"
+                  style={{
+                    filter: 'drop-shadow(0 6px 20px rgba(0, 0, 0, 0.15))',
+                    clipPath: 'ellipse(90% 85% at 50% 20%)'
+                  }}
+                />
               </div>
               
               {/* Credibility Indicators */}
@@ -237,4 +266,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;

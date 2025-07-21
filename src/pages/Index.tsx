@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,7 +5,6 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GraduationCap, Users, Award, BookOpen, CheckCircle, Star, Download, Calendar, Target, Lightbulb } from "lucide-react";
-
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Header />
@@ -45,40 +43,23 @@ const Index = () => {
               {/* Tim's Cartoon - Desktop: floating right, Mobile: centered below buttons */}
               <div className="hidden lg:block absolute -right-8 top-32">
                 <div className="relative">
-                  <img 
-                    src="/lovable-uploads/tim-cartoon.png" 
-                    alt="Tim - Your friendly professional development instructor"
-                    className="w-80 h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300 ease-smooth"
-                    style={{
-                      filter: 'drop-shadow(0 8px 25px rgba(34, 197, 94, 0.2))',
-                      clipPath: 'ellipse(90% 85% at 50% 20%)'
-                    }}
-                  />
+                  
                 </div>
               </div>
               
               {/* Tim's Cartoon - Mobile: centered below buttons */}
               <div className="lg:hidden flex justify-center pt-4">
-                <img 
-                  src="/lovable-uploads/tim-cartoon.png" 
-                  alt="Tim - Your friendly professional development instructor"
-                  className="w-52 h-auto drop-shadow-lg"
-                  style={{
-                    filter: 'drop-shadow(0 6px 20px rgba(34, 197, 94, 0.15))',
-                    clipPath: 'ellipse(90% 85% at 50% 20%)'
-                  }}
-                />
+                <img src="/lovable-uploads/tim-cartoon.png" alt="Tim - Your friendly professional development instructor" className="w-52 h-auto drop-shadow-lg" style={{
+                filter: 'drop-shadow(0 6px 20px rgba(34, 197, 94, 0.15))',
+                clipPath: 'ellipse(90% 85% at 50% 20%)'
+              }} />
               </div>
               
               {/* Credibility Indicators with Tim's Character */}
               <div className="flex items-center space-x-8 pt-8">
                 {/* Tim's Character */}
                 <div className="hidden sm:block">
-                  <img 
-                    src="/lovable-uploads/e1a072ae-3beb-4c51-908c-e17b4ab545d4.png" 
-                    alt="Tim - Your Professional Development Expert"
-                    className="w-48 h-48 object-contain"
-                  />
+                  <img src="/lovable-uploads/e1a072ae-3beb-4c51-908c-e17b4ab545d4.png" alt="Tim - Your Professional Development Expert" className="w-48 h-48 object-contain" />
                 </div>
                 
                 {/* Stats */}
@@ -276,5 +257,4 @@ const Index = () => {
       <Footer />
     </div>;
 };
-
 export default Index;

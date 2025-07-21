@@ -67,7 +67,7 @@ const About = () => {
                 
                 {/* Main character image */}
                 <img 
-                  src="/lovable-uploads/tim-cartoon.png" 
+                  src="/lovable-uploads/c9474d7e-8126-421a-a927-cbb485d9aa10.png" 
                   alt="Tim The Teacher - Professional Educator and Trainer"
                   className="relative z-10 w-80 h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
                 />

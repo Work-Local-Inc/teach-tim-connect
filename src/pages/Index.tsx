@@ -26,7 +26,7 @@ const Index = () => {
       <section className="relative min-h-[80vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=6000&q=80)` }}
+          style={{ backgroundImage: `url(/lovable-uploads/a606f90b-1c3b-4734-9cbf-5fcac340d0d1.png)` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         

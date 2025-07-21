@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +13,10 @@ import {
   CheckCircle,
   Calendar,
   MapPin,
-  Mail
+  Mail,
+  Lightbulb,
+  Target,
+  Star
 } from "lucide-react";
 
 const About = () => {
@@ -20,18 +24,66 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto text-white space-y-6">
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-              Meet Your Instructor
-            </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold">About Tim The Teacher</h1>
-            <p className="text-xl text-white/90 leading-relaxed">
-              With decades of teaching experience across technical, professional, and life skills, 
-              I'm passionate about helping adult learners unlock their full potential.
-            </p>
+      {/* Hero Section with Graphics */}
+      <section className="py-20 bg-gradient-primary relative overflow-hidden">
+        {/* Floating Icons */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 animate-bounce">
+            <BookOpen className="h-8 w-8 text-white/30" style={{ animationDelay: '0s', animationDuration: '3s' }} />
+          </div>
+          <div className="absolute top-32 right-20 animate-bounce">
+            <Lightbulb className="h-6 w-6 text-white/20" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+          </div>
+          <div className="absolute bottom-20 left-20 animate-bounce">
+            <Target className="h-7 w-7 text-white/25" style={{ animationDelay: '2s', animationDuration: '3.5s' }} />
+          </div>
+          <div className="absolute top-40 left-1/4 animate-bounce">
+            <Star className="h-5 w-5 text-white/20" style={{ animationDelay: '0.5s', animationDuration: '4.5s' }} />
+          </div>
+          <div className="absolute bottom-32 right-1/3 animate-bounce">
+            <Award className="h-6 w-6 text-white/30" style={{ animationDelay: '1.5s', animationDuration: '3.8s' }} />
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-white space-y-6 order-2 lg:order-1">
+              <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                Meet Your Instructor
+              </Badge>
+              <h1 className="text-4xl lg:text-6xl font-bold">About Tim The Teacher</h1>
+              <p className="text-xl text-white/90 leading-relaxed">
+                With decades of teaching experience across technical, professional, and life skills, 
+                I'm passionate about helping adult learners unlock their full potential.
+              </p>
+            </div>
+
+            {/* Tim's Character Image */}
+            <div className="order-1 lg:order-2 flex justify-center relative">
+              <div className="relative">
+                {/* Background glow effect */}
+                <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl scale-110"></div>
+                
+                {/* Main character image */}
+                <img 
+                  src="/lovable-uploads/tim-cartoon.png" 
+                  alt="Tim The Teacher - Professional Educator and Trainer"
+                  className="relative z-10 w-80 h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                />
+                
+                {/* Decorative floating icons around Tim */}
+                <div className="absolute -top-4 -right-4 bg-white/20 backdrop-blur-sm rounded-full p-3 animate-bounce" style={{ animationDelay: '0.3s' }}>
+                  <GraduationCap className="h-6 w-6 text-white" />
+                </div>
+                <div className="absolute -bottom-2 -left-4 bg-white/20 backdrop-blur-sm rounded-full p-3 animate-bounce" style={{ animationDelay: '1.2s' }}>
+                  <Users className="h-6 w-6 text-white" />
+                </div>
+                <div className="absolute top-1/2 -right-8 bg-white/20 backdrop-blur-sm rounded-full p-2 animate-bounce" style={{ animationDelay: '2.1s' }}>
+                  <Lightbulb className="h-5 w-5 text-white" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

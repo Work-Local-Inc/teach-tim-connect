@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,35 +12,32 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(/lovable-uploads/a606f90b-1c3b-4734-9cbf-5fcac340d0d1.png)`
-      }} />
-        <div className="absolute inset-0 bg-gradient-hero" />
+      <section className="relative min-h-[80vh] flex items-center bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50" />
         
         <div className="relative container mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-6 relative">
-              <Badge variant="secondary" className="w-fit bg-white/20 text-white border-white/30">
+            <div className="text-foreground space-y-6 relative">
+              <Badge variant="secondary" className="w-fit bg-primary/20 text-primary border-primary/30">
                 ✨ Decades of Teaching Excellence
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 Unlock Your Potential with 
-                <span className="block text-accent"> Expert Training</span>
+                <span className="block text-primary"> Expert Training</span>
               </h1>
               
-              <p className="text-xl text-white/90 leading-relaxed max-w-xl">
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
                 From technical skills to communication mastery, I help adult learners 
                 and corporate teams achieve their professional development goals through 
                 proven teaching methods and personalized attention.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="outline" className="bg-white text-emerald-600 border-emerald-600 hover:bg-emerald-50">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                   Explore Training Programs
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:text-primary bg-orange-500 hover:bg-orange-400">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   Download Free Resources
                 </Button>
               </div>
@@ -52,7 +50,7 @@ const Index = () => {
                     alt="Tim - Your friendly professional development instructor"
                     className="w-80 h-auto drop-shadow-lg hover:scale-105 transition-transform duration-300 ease-smooth"
                     style={{
-                      filter: 'drop-shadow(0 8px 25px rgba(0, 0, 0, 0.15))',
+                      filter: 'drop-shadow(0 8px 25px rgba(34, 197, 94, 0.2))',
                       clipPath: 'ellipse(90% 85% at 50% 20%)'
                     }}
                   />
@@ -66,7 +64,7 @@ const Index = () => {
                   alt="Tim - Your friendly professional development instructor"
                   className="w-52 h-auto drop-shadow-lg"
                   style={{
-                    filter: 'drop-shadow(0 6px 20px rgba(0, 0, 0, 0.15))',
+                    filter: 'drop-shadow(0 6px 20px rgba(34, 197, 94, 0.15))',
                     clipPath: 'ellipse(90% 85% at 50% 20%)'
                   }}
                 />
@@ -75,22 +73,22 @@ const Index = () => {
               {/* Credibility Indicators */}
               <div className="flex items-center space-x-8 pt-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">25+</div>
-                  <div className="text-sm text-white/80">Years Experience</div>
+                  <div className="text-2xl font-bold text-primary">25+</div>
+                  <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">1000+</div>
-                  <div className="text-sm text-white/80">Students Trained</div>
+                  <div className="text-2xl font-bold text-primary">1000+</div>
+                  <div className="text-sm text-muted-foreground">Students Trained</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">100+</div>
-                  <div className="text-sm text-white/80">Corporate Clients</div>
+                  <div className="text-2xl font-bold text-primary">100+</div>
+                  <div className="text-sm text-muted-foreground">Corporate Clients</div>
                 </div>
               </div>
             </div>
             
             <div className="lg:justify-self-end">
-              <LeadCaptureForm title="Start Your Learning Journey" description="Get a free consultation and discover the perfect training solution for your needs." className="bg-white/95 backdrop-blur-sm shadow-card" />
+              <LeadCaptureForm title="Start Your Learning Journey" description="Get a free consultation and discover the perfect training solution for your needs." className="bg-card/50 backdrop-blur-sm shadow-card border border-border" />
             </div>
           </div>
         </div>
@@ -100,7 +98,7 @@ const Index = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Trusted by Industry Leaders</h2>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Trusted by Industry Leaders</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Tim's expertise spans multiple industries with proven results in both 
               public and private sector training programs.
@@ -124,12 +122,12 @@ const Index = () => {
             icon: BookOpen,
             label: "Continuous Learning",
             desc: "Always Updated with Latest Methods"
-          }].map((item, index) => <Card key={index} className="text-center p-6 border-0 shadow-soft">
+          }].map((item, index) => <Card key={index} className="text-center p-6 bg-card border-border shadow-card hover:border-primary/30 transition-colors">
                 <CardContent className="space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto border border-primary/20">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold">{item.label}</h3>
+                  <h3 className="font-semibold text-foreground">{item.label}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </CardContent>
               </Card>)}
@@ -138,11 +136,11 @@ const Index = () => {
       </section>
 
       {/* What I Teach */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">What I Teach</Badge>
-            <h2 className="text-4xl font-bold mb-6">Comprehensive Training Solutions</h2>
+            <Badge variant="outline" className="mb-4 border-primary text-primary">What I Teach</Badge>
+            <h2 className="text-4xl font-bold mb-6 text-foreground">Comprehensive Training Solutions</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From technical expertise to essential life skills, I offer diverse training 
               programs tailored to adult learners and professional development needs.
@@ -180,17 +178,17 @@ const Index = () => {
             title: "Life Skills Training",
             desc: "Practical skills for personal and professional growth including sports instruction.",
             features: ["Snowboarding", "Motorcycling", "Safety Training", "Personal Development"]
-          }].map((service, index) => <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 shadow-soft">
+          }].map((service, index) => <Card key={index} className="group hover:shadow-card transition-all duration-300 bg-card border-border hover:border-primary/30">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-primary/20">
+                    <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.desc}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, i) => <li key={i} className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                        {feature}
+                        <span className="text-muted-foreground">{feature}</span>
                       </li>)}
                   </ul>
                 </CardContent>
@@ -203,7 +201,7 @@ const Index = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Students Say</h2>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">What Students Say</h2>
             <p className="text-muted-foreground">Real feedback from learners who've transformed their careers</p>
           </div>
           
@@ -223,14 +221,14 @@ const Index = () => {
             role: "HR Director",
             content: "We've worked with Tim for corporate communication training. The improvement in our team dynamics has been remarkable.",
             rating: 5
-          }].map((testimonial, index) => <Card key={index} className="border-0 shadow-soft">
+          }].map((testimonial, index) => <Card key={index} className="bg-card border-border shadow-card">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
                   </div>
                   <p className="text-muted-foreground mb-4">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="font-semibold text-foreground">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
@@ -240,21 +238,21 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-20 bg-gradient-to-br from-background to-muted/50">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto text-white space-y-6">
-            <h2 className="text-4xl font-bold">Ready to Transform Your Skills?</h2>
-            <p className="text-xl text-white/90">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-4xl font-bold text-foreground">Ready to Transform Your Skills?</h2>
+            <p className="text-xl text-muted-foreground">
               Join thousands of successful learners who've advanced their careers through 
               personalized, expert-led training programs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Calendar className="mr-2 h-5 w-5" />
                 Schedule Free Consultation
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <Download className="mr-2 h-5 w-5" />
                 Get Free Training Guide
               </Button>

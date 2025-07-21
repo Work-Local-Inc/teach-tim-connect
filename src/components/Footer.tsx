@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Youtube, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -5,26 +6,26 @@ import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-primary-foreground font-bold">T</span>
               </div>
-              <span className="text-lg font-bold">Tim The Teacher</span>
+              <span className="text-lg font-bold text-foreground">Tim The Teacher</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Empowering adult learners with decades of teaching experience in technical, 
               professional, and life skills development.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="hover:text-primary">
+              <Button variant="ghost" size="icon" className="hover:text-primary text-muted-foreground">
                 <Youtube className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
+              <Button variant="ghost" size="icon" className="hover:text-primary text-muted-foreground">
                 <Linkedin className="h-4 w-4" />
               </Button>
             </div>
@@ -70,9 +71,9 @@ const Footer = () => {
               <Input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="text-sm"
+                className="text-sm bg-background border-border text-foreground"
               />
-              <Button size="sm" className="w-full">
+              <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 Subscribe
               </Button>
             </div>

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,12 +20,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b sticky top-0 z-50">
+    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">T</span>
             </div>
             <span className="text-xl font-bold text-foreground">Tim The Teacher</span>
@@ -45,14 +46,14 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="ml-4">
+            <Button size="sm" className="ml-4 bg-primary text-primary-foreground hover:bg-primary/90">
               Get Started
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -65,7 +66,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -79,7 +80,7 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button size="sm" className="self-start mt-4">
+              <Button size="sm" className="self-start mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
                 Get Started
               </Button>
             </nav>

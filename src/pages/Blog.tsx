@@ -85,7 +85,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background light:bg-gradient-primary">
       <Header />
       
       {/* Hero Section */}

@@ -35,7 +35,7 @@ const Index = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" variant="outline" className="bg-white text-emerald-600 border-emerald-600 hover:bg-emerald-50">
                   Explore Training Programs
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:text-primary bg-orange-500 hover:bg-orange-400">

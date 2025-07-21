@@ -64,7 +64,7 @@ All colors MUST be HSL.
     --background: 222 84% 5%;
     --foreground: 0 0% 98%;
 
-    --card: 222 84% 15%;
+    --card: 0 0% 100% / 0.08;
     --card-foreground: 0 0% 98%;
 
     --popover: 222 84% 8%;

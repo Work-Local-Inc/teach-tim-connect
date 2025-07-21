@@ -155,9 +155,11 @@ const Blog = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {blogPosts.map((post, index) => (
+                {blogPosts.map((post, index) => {
+                  const gradientClass = `gradient-blog-${(index % 6) + 1}`;
+                  return (
                   <Card key={index} className="border-0 shadow-soft hover:shadow-card transition-all duration-300 group">
-                    <div className="h-48 bg-gradient-primary rounded-t-lg"></div>
+                    <div className={`h-48 ${gradientClass} rounded-t-lg`}></div>
                     <CardHeader className="pb-2">
                       <div className="flex items-center justify-between mb-2">
                         <Badge variant="outline" className="text-xs">{post.category}</Badge>
@@ -191,7 +193,8 @@ const Blog = () => {
                       </Button>
                     </CardContent>
                   </Card>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Load More */}

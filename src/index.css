@@ -39,9 +39,15 @@ All colors MUST be HSL.
     --ring: 160 84% 39%;
 
     /* Light theme custom tokens - restored original gradients and hero with emerald accents */
-    --gradient-primary: linear-gradient(135deg, hsl(220 60% 97%), hsl(210 40% 96%));
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(197 71% 52%));
     --gradient-hero: linear-gradient(135deg, hsl(221 83% 25% / 0.7), hsl(197 71% 30% / 0.6));
     --gradient-hero-banner: linear-gradient(135deg, hsl(221 83% 53%), hsl(197 71% 52%));
+    --gradient-blog-1: linear-gradient(135deg, hsl(160 84% 39%), hsl(180 100% 50%));
+    --gradient-blog-2: linear-gradient(135deg, hsl(280 100% 70%), hsl(320 100% 60%));
+    --gradient-blog-3: linear-gradient(135deg, hsl(45 100% 60%), hsl(60 100% 50%));
+    --gradient-blog-4: linear-gradient(135deg, hsl(200 100% 60%), hsl(220 100% 70%));
+    --gradient-blog-5: linear-gradient(135deg, hsl(340 100% 60%), hsl(360 100% 70%));
+    --gradient-blog-6: linear-gradient(135deg, hsl(120 60% 50%), hsl(140 70% 60%));
     --hero-bg: url('/lovable-uploads/9ee271b8-e1d4-44e8-b542-89b52f0dd32e.png');
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.15);
     --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.08);
@@ -90,9 +96,15 @@ All colors MUST be HSL.
     --ring: 160 84% 39%;
 
     /* Dark theme custom tokens - PSK-style sleek black with emerald glows */
-    --gradient-primary: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 8%));
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(197 71% 52%));
     --gradient-hero: linear-gradient(135deg, hsl(222 84% 5% / 0.98), hsl(222 84% 8% / 0.95));
     --gradient-hero-banner: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 8%));
+    --gradient-blog-1: linear-gradient(135deg, hsl(160 84% 39%), hsl(180 100% 50%));
+    --gradient-blog-2: linear-gradient(135deg, hsl(280 100% 70%), hsl(320 100% 60%));
+    --gradient-blog-3: linear-gradient(135deg, hsl(45 100% 60%), hsl(60 100% 50%));
+    --gradient-blog-4: linear-gradient(135deg, hsl(200 100% 60%), hsl(220 100% 70%));
+    --gradient-blog-5: linear-gradient(135deg, hsl(340 100% 60%), hsl(360 100% 70%));
+    --gradient-blog-6: linear-gradient(135deg, hsl(120 60% 50%), hsl(140 70% 60%));
     --hero-bg: none;
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.25);
     --shadow-card: 0 8px 30px hsl(160 84% 39% / 0.15);
@@ -153,3 +165,11 @@ All colors MUST be HSL.
   box-shadow: 0 0 20px hsl(160 84% 39% / 0.3);
   transition: box-shadow 0.3s ease;
 }
+
+/* Blog gradient utilities */
+.gradient-blog-1 { background: var(--gradient-blog-1); }
+.gradient-blog-2 { background: var(--gradient-blog-2); }
+.gradient-blog-3 { background: var(--gradient-blog-3); }
+.gradient-blog-4 { background: var(--gradient-blog-4); }
+.gradient-blog-5 { background: var(--gradient-blog-5); }
+.gradient-blog-6 { background: var(--gradient-blog-6); }

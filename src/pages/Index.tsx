@@ -65,7 +65,7 @@ const Index = () => {
                 {/* Stats */}
                 <div className="flex items-center space-x-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">25+</div>
+                    <div className="text-3xl font-bold text-primary">20+</div>
                     <div className="text-sm text-white/90">Years Experience</div>
                   </div>
                   <div className="text-center">
@@ -73,7 +73,7 @@ const Index = () => {
                     <div className="text-sm text-white/90">Students Trained</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">100+</div>
+                    <div className="text-3xl font-bold text-primary">multiple</div>
                     <div className="text-sm text-white/90">Corporate Clients</div>
                   </div>
                 </div>

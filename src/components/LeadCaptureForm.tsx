@@ -74,7 +74,7 @@ const LeadCaptureForm = ({
   return <Card className={`w-full ${className}`}>
       <CardHeader className="text-center">
         <CardTitle className="text-2xl">{title}</CardTitle>
-        <CardDescription className="text-base text-sky-950">{description}</CardDescription>
+        <CardDescription className="text-base text-emerald-500">{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -106,7 +106,7 @@ const LeadCaptureForm = ({
             {isSubmitting ? "Sending Your Request..." : "Send Inquiry"}
           </Button>
 
-          <p className="text-xs text-center text-sky-950">
+          <p className="text-xs text-center text-emerald-500">
             * Required fields. We respect your privacy and will never share your information.
           </p>
         </form>

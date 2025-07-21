@@ -1,12 +1,15 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -46,7 +49,18 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="ml-4 bg-primary text-primary-foreground hover:bg-primary/90">
+            
+            {/* Theme Toggle */}
+            <div className="flex items-center space-x-2 ml-4">
+              <Sun className="h-4 w-4" />
+              <Switch
+                checked={theme === "dark"}
+                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+              />
+              <Moon className="h-4 w-4" />
+            </div>
+            
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get Started
             </Button>
           </nav>
@@ -80,6 +94,18 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Theme Toggle */}
+              <div className="flex items-center space-x-2 py-2">
+                <Sun className="h-4 w-4" />
+                <Switch
+                  checked={theme === "dark"}
+                  onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+                />
+                <Moon className="h-4 w-4" />
+                <span className="text-sm text-muted-foreground ml-2">Dark mode</span>
+              </div>
+              
               <Button size="sm" className="self-start mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
                 Get Started
               </Button>

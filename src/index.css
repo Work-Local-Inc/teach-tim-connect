@@ -1,3 +1,4 @@
+
 /* Force reload */
 @tailwind base;
 @tailwind components;
@@ -9,11 +10,11 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light theme colors - restored original design with emerald-600 buttons */
+    /* Light theme colors - enhanced form styling */
     --background: 220 60% 97%;
     --foreground: 240 10% 3.9%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100% / 0.95;
     --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
@@ -34,11 +35,11 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 214 32% 85%;
+    --input: 0 0% 98%;
     --ring: 160 84% 39%;
 
-    /* Light theme custom tokens - restored original gradients and hero with emerald accents */
+    /* Light theme custom tokens - enhanced form styling */
     --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(197 71% 52%));
     --gradient-hero: linear-gradient(135deg, hsl(221 83% 25% / 0.7), hsl(197 71% 30% / 0.6));
     --gradient-hero-banner: linear-gradient(135deg, hsl(221 83% 53%), hsl(197 71% 52%));
@@ -50,8 +51,15 @@ All colors MUST be HSL.
     --gradient-blog-6: linear-gradient(135deg, hsl(120 60% 50%), hsl(140 70% 60%));
     --hero-bg: url('/lovable-uploads/9ee271b8-e1d4-44e8-b542-89b52f0dd32e.png');
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.15);
-    --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.08);
+    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.12);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Enhanced form styling variables */
+    --form-card-bg: linear-gradient(135deg, hsl(0 0% 100% / 0.95), hsl(160 84% 99% / 0.9));
+    --form-input-bg: hsl(0 0% 98%);
+    --form-input-border: hsl(214 32% 82%);
+    --form-input-focus: hsl(160 84% 39%);
+    --form-shadow: 0 8px 32px hsl(0 0% 0% / 0.1), 0 4px 16px hsl(160 84% 39% / 0.08);
 
     --radius: 0.5rem;
 
@@ -110,6 +118,13 @@ All colors MUST be HSL.
     --shadow-card: 0 8px 30px hsl(160 84% 39% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Dark theme form variables remain the same */
+    --form-card-bg: hsl(0 0% 100% / 0.18);
+    --form-input-bg: hsl(222 84% 12%);
+    --form-input-border: hsl(222 84% 12%);
+    --form-input-focus: hsl(160 84% 39%);
+    --form-shadow: 0 8px 30px hsl(160 84% 39% / 0.15);
+
     --sidebar-background: 222 84% 5%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 160 84% 39%;
@@ -128,6 +143,49 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced form styling */
+@layer components {
+  .form-card-enhanced {
+    background: var(--form-card-bg);
+    box-shadow: var(--form-shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .form-input-enhanced {
+    background: var(--form-input-bg);
+    border: 1.5px solid var(--form-input-border);
+    transition: all 0.2s ease;
+  }
+
+  .form-input-enhanced:focus {
+    border-color: var(--form-input-focus);
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.1);
+    background: hsl(0 0% 100%);
+  }
+
+  .form-input-enhanced:hover {
+    border-color: hsl(var(--ring) / 0.5);
+  }
+
+  .form-select-enhanced {
+    background: var(--form-input-bg);
+    border: 1.5px solid var(--form-input-border);
+    transition: all 0.2s ease;
+  }
+
+  .form-select-enhanced:focus {
+    border-color: var(--form-input-focus);
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.1);
+    background: hsl(0 0% 100%);
+    outline: none;
+  }
+
+  .form-select-enhanced:hover {
+    border-color: hsl(var(--ring) / 0.5);
   }
 }
 

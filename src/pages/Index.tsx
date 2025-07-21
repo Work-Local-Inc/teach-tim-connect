@@ -56,25 +56,25 @@ const Index = () => {
               </div>
               
               {/* Credibility Indicators with Tim's Character */}
-              <div className="flex items-center space-x-8 pt-8">
+              <div className="flex items-center justify-start space-x-6 pt-6 max-w-4xl">
                 {/* Tim's Character */}
-                <div className="hidden sm:block">
+                <div className="hidden sm:block flex-shrink-0">
                   <img src="/lovable-uploads/e1a072ae-3beb-4c51-908c-e17b4ab545d4.png" alt="Tim - Your Professional Development Expert" className="w-48 h-48 object-contain" />
                 </div>
                 
                 {/* Stats */}
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">25+</div>
-                    <div className="text-sm text-white/80">Years Experience</div>
+                    <div className="text-3xl font-bold text-primary">25+</div>
+                    <div className="text-sm text-white/90">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">1000+</div>
-                    <div className="text-sm text-white/80">Students Trained</div>
+                    <div className="text-3xl font-bold text-primary">1000+</div>
+                    <div className="text-sm text-white/90">Students Trained</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">100+</div>
-                    <div className="text-sm text-white/80">Corporate Clients</div>
+                    <div className="text-3xl font-bold text-primary">100+</div>
+                    <div className="text-sm text-white/90">Corporate Clients</div>
                   </div>
                 </div>
               </div>

@@ -29,7 +29,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/tim-cartoon.png" 
+              src="/lovable-uploads/9f8241f6-5cae-40c6-83a6-f62dd7c5a533.png" 
               alt="Tim The Teacher" 
               className="w-10 h-10 object-contain"
             />

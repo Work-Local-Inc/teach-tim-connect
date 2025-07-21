@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +27,7 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-20 gradient-hero-banner">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto text-white space-y-6">
             <Badge variant="secondary" className="bg-white/20 text-white border-white/30">

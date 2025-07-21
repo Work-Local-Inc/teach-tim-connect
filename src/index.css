@@ -42,6 +42,7 @@ All colors MUST be HSL.
     /* Light theme custom tokens - restored original gradients and hero with emerald accents */
     --gradient-primary: linear-gradient(135deg, hsl(220 60% 97%), hsl(210 40% 96%));
     --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.9), hsl(197 71% 52% / 0.8));
+    --gradient-hero-banner: linear-gradient(135deg, hsl(221 83% 53%), hsl(197 71% 52%));
     --hero-bg: url('/src/assets/hero-image.jpg');
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.15);
     --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.08);
@@ -92,6 +93,7 @@ All colors MUST be HSL.
     /* Dark theme custom tokens - PSK-style sleek black with emerald glows */
     --gradient-primary: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 8%));
     --gradient-hero: linear-gradient(135deg, hsl(222 84% 5% / 0.98), hsl(222 84% 8% / 0.95));
+    --gradient-hero-banner: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 8%));
     --hero-bg: none;
     --shadow-soft: 0 4px 20px hsl(160 84% 39% / 0.25);
     --shadow-card: 0 8px 30px hsl(160 84% 39% / 0.15);
@@ -128,6 +130,10 @@ All colors MUST be HSL.
 
 .hero-overlay {
   background: var(--gradient-hero);
+}
+
+.gradient-hero-banner {
+  background: var(--gradient-hero-banner);
 }
 
 /* PSK-style enhancements for dark mode */

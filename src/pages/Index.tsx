@@ -70,19 +70,31 @@ const Index = () => {
                 />
               </div>
               
-              {/* Credibility Indicators */}
+              {/* Credibility Indicators with Tim's Character */}
               <div className="flex items-center space-x-8 pt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">25+</div>
-                  <div className="text-sm text-white/80">Years Experience</div>
+                {/* Tim's Character */}
+                <div className="hidden sm:block">
+                  <img 
+                    src="/lovable-uploads/e1a072ae-3beb-4c51-908c-e17b4ab545d4.png" 
+                    alt="Tim - Your Professional Development Expert"
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">1000+</div>
-                  <div className="text-sm text-white/80">Students Trained</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100+</div>
-                  <div className="text-sm text-white/80">Corporate Clients</div>
+                
+                {/* Stats */}
+                <div className="flex items-center space-x-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">25+</div>
+                    <div className="text-sm text-white/80">Years Experience</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">1000+</div>
+                    <div className="text-sm text-white/80">Students Trained</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">100+</div>
+                    <div className="text-sm text-white/80">Corporate Clients</div>
+                  </div>
                 </div>
               </div>
             </div>

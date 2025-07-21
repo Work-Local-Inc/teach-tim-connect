@@ -10,8 +10,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light theme colors */
-    --background: 0 0% 100%;
+    /* Light theme colors - restored original design */
+    --background: 220 60% 97%;
     --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
@@ -20,7 +20,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 158 64% 52%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96%;
@@ -29,7 +29,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 46.9%;
 
-    --accent: 158 64% 52%;
+    --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -37,12 +37,13 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 158 64% 52%;
+    --ring: 221 83% 53%;
 
-    /* Light theme custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 96%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100% / 0.95), hsl(210 40% 96% / 0.9));
-    --shadow-soft: 0 4px 20px hsl(158 64% 52% / 0.15);
+    /* Light theme custom tokens - restored original gradients and hero */
+    --gradient-primary: linear-gradient(135deg, hsl(220 60% 97%), hsl(210 40% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.9), hsl(197 71% 52% / 0.8));
+    --hero-bg: url('/src/assets/hero-image.jpg');
+    --shadow-soft: 0 4px 20px hsl(221 83% 53% / 0.15);
     --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -50,16 +51,16 @@ All colors MUST be HSL.
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 3.9%;
-    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 40% 96%;
     --sidebar-accent-foreground: 240 10% 3.9%;
     --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 158 64% 52%;
+    --sidebar-ring: 221 83% 53%;
   }
 
   .dark {
-    /* Dark theme colors */
+    /* Dark theme colors - keep the sleek design you love */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -88,9 +89,10 @@ All colors MUST be HSL.
     --input: 240 3.7% 15.9%;
     --ring: 158 64% 52%;
 
-    /* Dark theme custom tokens */
+    /* Dark theme custom tokens - keep current sleek style */
     --gradient-primary: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
     --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9% / 0.95), hsl(240 3.7% 15.9% / 0.9));
+    --hero-bg: none;
     --shadow-soft: 0 4px 20px hsl(158 64% 52% / 0.15);
     --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.25);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -114,4 +116,16 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Hero section specific styles */
+.hero-section {
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  background: var(--gradient-hero);
 }

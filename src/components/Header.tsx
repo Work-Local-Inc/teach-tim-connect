@@ -27,11 +27,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">T</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Tim The Teacher</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/tim-cartoon.png" 
+              alt="Tim The Teacher" 
+              className="w-10 h-10 object-contain"
+            />
+            <span className="text-xl font-bold" style={{ color: 'hsl(160 84% 39%)' }}>TimTheTeacher</span>
           </Link>
 
           {/* Desktop Navigation */}

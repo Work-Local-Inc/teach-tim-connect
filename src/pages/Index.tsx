@@ -219,7 +219,7 @@ const Index = () => {
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
                   </div>
-                  <p className="text-muted-foreground mb-4">"Awesome and Encouraging!"</p>
+                  <p className="text-muted-foreground mb-4">&quot;Awesome and Encouraging!&quot;</p>
                   <div>
                     <div className="font-semibold text-foreground">E.H.</div>
                   </div>

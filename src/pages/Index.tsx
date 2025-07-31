@@ -206,8 +206,8 @@ const Index = () => {
             text: "Strong knowledge in area of expertise",
             author: "A.P."
           }, {
-            text: "Awesome and Encouraging!",
-            author: "E.H."
+            text: "All the knowledge and experience",
+            author: "E.D."
           }].map((testimonial, index) => <Card key={index} className="bg-card border-border shadow-card">
                 <CardContent className="p-6">
                   <div className="flex mb-4">

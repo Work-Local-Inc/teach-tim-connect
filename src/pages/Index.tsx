@@ -222,7 +222,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">"{testimonial.content}"</p>
                   <div>
                     <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    
                   </div>
                 </CardContent>
               </Card>)}

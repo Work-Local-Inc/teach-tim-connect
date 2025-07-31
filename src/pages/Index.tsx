@@ -200,28 +200,22 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[{
-            name: "Sarah Johnson",
-            role: "Engineering Manager",
-            content: "Tim's technical training program was exactly what our team needed. His approach made complex concepts accessible and practical.",
-            rating: 5
+            text: "Awesome and Encouraging!",
+            author: "E.H."
           }, {
-            name: "Michael Chen",
-            role: "Career Changer",
-            content: "At 45, I thought it was too late to learn new skills. Tim's patient teaching style gave me the confidence to pursue my certification.",
-            rating: 5
+            text: "Strong knowledge in area of expertise",
+            author: "A.P."
           }, {
-            name: "Lisa Rodriguez",
-            role: "HR Director",
-            content: "We've worked with Tim for corporate communication training. The improvement in our team dynamics has been remarkable.",
-            rating: 5
+            text: "Awesome and Encouraging!",
+            author: "E.H."
           }].map((testimonial, index) => <Card key={index} className="bg-card border-border shadow-card">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
                   </div>
-                  <p className="text-muted-foreground mb-4">&quot;Awesome and Encouraging!&quot;</p>
+                  <p className="text-muted-foreground mb-4">&quot;{testimonial.text}&quot;</p>
                   <div>
-                    <div className="font-semibold text-foreground">E.H.</div>
+                    <div className="font-semibold text-foreground">{testimonial.author}</div>
                   </div>
                 </CardContent>
               </Card>)}

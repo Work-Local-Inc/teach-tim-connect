@@ -1,12 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Youtube, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 const Footer = () => {
-  return (
-    <footer className="bg-muted/50 border-t border-border">
+  return <footer className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -68,11 +65,7 @@ const Footer = () => {
               Get weekly educational content and training tips.
             </p>
             <div className="space-y-2">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="text-sm bg-background border-border text-foreground"
-              />
+              <Input type="email" placeholder="Enter your email" className="text-sm bg-background border-border text-foreground" />
               <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 Subscribe
               </Button>
@@ -86,7 +79,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>tim@timtheteacher.com</span>
+                <span>tim@worklocal.ca</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
@@ -99,8 +92,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

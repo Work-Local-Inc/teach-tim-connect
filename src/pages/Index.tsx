@@ -49,10 +49,7 @@ const Index = () => {
               
               {/* Tim's Cartoon - Mobile: centered below buttons */}
               <div className="lg:hidden flex justify-center pt-4">
-                <img src="/lovable-uploads/tim-cartoon.png" alt="Tim - Your friendly professional development instructor" className="w-52 h-auto drop-shadow-lg" style={{
-                filter: 'drop-shadow(0 6px 20px rgba(34, 197, 94, 0.15))',
-                clipPath: 'ellipse(90% 85% at 50% 20%)'
-              }} />
+                
               </div>
               
               {/* Credibility Indicators with Tim's Character */}

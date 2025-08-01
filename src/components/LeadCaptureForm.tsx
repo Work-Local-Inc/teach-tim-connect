@@ -35,20 +35,40 @@ const LeadCaptureForm = ({
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    toast({
-      title: "Thank you for your interest!",
-      description: "We'll be in touch within 24 hours to discuss your training needs."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      message: "",
-      interest: ""
-    });
+    try {
+      const formName = variant === "compact" ? "newsletter-form" : "contact-form";
+      const formData = new FormData(e.target as HTMLFormElement);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Thank you for your interest!",
+          description: "We'll be in touch within 24 hours to discuss your training needs."
+        });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+          interest: ""
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
+    
     setIsSubmitting(false);
   };
 
@@ -67,7 +87,16 @@ const LeadCaptureForm = ({
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form 
+            name="newsletter-form" 
+            method="POST" 
+            data-netlify="true" 
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit} 
+            className="space-y-4"
+          >
+            <input type="hidden" name="form-name" value="newsletter-form" />
+            <input type="hidden" name="bot-field" />
             <Input 
               name="name" 
               placeholder="Your Name" 
@@ -101,7 +130,16 @@ const LeadCaptureForm = ({
         <CardDescription className="text-base text-emerald-600 dark:text-emerald-500">{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form 
+          name="contact-form" 
+          method="POST" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit} 
+          className="space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact-form" />
+          <input type="hidden" name="bot-field" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Input 
               name="name" 

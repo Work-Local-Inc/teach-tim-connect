@@ -19,6 +19,28 @@
   </head>
 
   <body>
+    <!-- Hidden forms for Netlify detection during build -->
+    <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="tel" name="phone" />
+      <select name="interest">
+        <option value="corporate-training">Corporate Training</option>
+        <option value="technical-skills">Technical Skills Development</option>
+        <option value="communication-skills">Communication Skills</option>
+        <option value="industry-certifications">Industry Certifications</option>
+        <option value="custom-training">Custom Training Program</option>
+        <option value="consultation">Training Consultation</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+    
+    <form name="newsletter-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
